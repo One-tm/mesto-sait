@@ -277,6 +277,7 @@ export function PriceList() {
                         onClick={(event) => event.preventDefault()}
                         className="focus-ring block w-full rounded-2xl px-4 py-3 text-left text-sm font-medium text-ink transition hover:bg-paper-mint"
                         role="option"
+                        aria-selected={query === breed}
                       >
                         {breed}
                       </button>

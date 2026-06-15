@@ -58,6 +58,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="mt-4 block overflow-hidden rounded-2xl border border-line bg-white shadow-card"
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/map-preview.png"
               alt="Карта проезда"
