@@ -17,11 +17,11 @@ function getPreviewTarget(breedNames: readonly string[]) {
 }
 
 function displayBreedTitle(title: string) {
-  return title === "Папильон" ? "Папийьон" : title;
+  return title === "Папильон" ? "Папийон" : title;
 }
 
 function displayBreedName(breed: string) {
-  return breed === "Папийьон (Папильон)" ? "Папийьон" : breed;
+  return breed === "Папийон (Папильон)" ? "Папийон" : breed;
 }
 
 export function PricePreview() {

@@ -33,11 +33,11 @@ const filterControlClass =
   "focus-ring min-h-12 w-full appearance-none rounded-full border border-mint/35 bg-white py-3 pl-12 pr-12 text-left text-sm font-semibold text-ink shadow-sm outline-none transition hover:border-mint";
 
 function displayBreedTitle(title: string) {
-  return title === "Папильон" ? "Папийьон" : title;
+  return title === "Папильон" ? "Папийон" : title;
 }
 
 function displayBreedName(breed: string) {
-  return breed === "Папийьон (Папильон)" ? "Папийьон" : breed;
+  return breed === "Папийон (Папильон)" ? "Папийон" : breed;
 }
 
 function getMinPrice(group: GenericPriceGroup) {

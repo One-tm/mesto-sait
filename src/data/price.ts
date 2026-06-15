@@ -88,7 +88,7 @@ export const priorityBreedSections = [
   {
     "title": "Папильон",
     "breedNames": [
-      "Папийьон (Папильон)"
+      "Папийон (Папильон)"
     ]
   },
   {
@@ -2022,7 +2022,7 @@ export const dogPriceGroups = [
   },
   {
     "id": "papiy-on-papil-on",
-    "breed": "Папийьон (Папильон)",
+    "breed": "Папийон (Папильон)",
     "services": [
       {
         "name": "Комплекс со стрижкой",
