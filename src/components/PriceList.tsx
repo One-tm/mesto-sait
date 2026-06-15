@@ -30,7 +30,7 @@ const normalize = (value: string) => value.toLowerCase().replace("ё", "е").tri
 const priorityBreedNames = priorityBreedSections.flatMap((section) => section.breedNames);
 const priorityOrder = new Map<string, number>(priorityBreedNames.map((breed, index) => [breed, index]));
 const filterControlClass =
-  "focus-ring min-h-12 w-full appearance-none rounded-full border border-line bg-paper py-3 pl-12 pr-12 text-left text-sm font-medium text-ink outline-none";
+  "focus-ring min-h-12 w-full appearance-none rounded-full border border-mint/35 bg-white py-3 pl-12 pr-12 text-left text-sm font-semibold text-ink shadow-sm outline-none transition hover:border-mint";
 
 function displayBreedTitle(title: string) {
   return title === "Папильон" ? "Папийьон" : title;
@@ -206,7 +206,7 @@ export function PriceList() {
       </section>
 
       <section aria-labelledby="all-dog-prices">
-        <div className="rounded-3xl border border-line bg-white p-4 shadow-sm">
+        <div className="rounded-3xl border border-coral/25 bg-coral-soft/70 p-4 shadow-soft ring-1 ring-white/80">
           <div className="grid gap-3 lg:grid-cols-2">
             <div
               className="relative"

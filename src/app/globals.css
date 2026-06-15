@@ -48,7 +48,7 @@ a {
 button,
 input,
 select {
-  font: inherit;
+  font-family: inherit;
 }
 
 .container {
