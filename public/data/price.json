@@ -1,0 +1,114 @@
+[
+  {
+    "id": "dog-york-complex",
+    "petType": "dog",
+    "breed": "Йоркширский терьер",
+    "size": "small",
+    "serviceCategory": "Комплекс",
+    "serviceName": "Комплексный груминг",
+    "priceFrom": 2600,
+    "priceTo": 3300,
+    "durationMinutes": 120
+  },
+  {
+    "id": "dog-spitz-complex",
+    "petType": "dog",
+    "breed": "Шпиц",
+    "size": "small",
+    "coatType": "густая шерсть",
+    "serviceCategory": "Комплекс",
+    "serviceName": "Купание, вычес и гигиена",
+    "priceFrom": 2800,
+    "priceTo": 4200,
+    "durationMinutes": 150
+  },
+  {
+    "id": "dog-poodle-haircut",
+    "petType": "dog",
+    "breed": "Пудель",
+    "size": "medium",
+    "serviceCategory": "Стрижка",
+    "serviceName": "Модельная стрижка",
+    "priceFrom": 3800,
+    "priceTo": 5200,
+    "durationMinutes": 180
+  },
+  {
+    "id": "dog-corgi-care",
+    "petType": "dog",
+    "breed": "Корги",
+    "size": "medium",
+    "serviceCategory": "Уход",
+    "serviceName": "Купание и вычес",
+    "priceFrom": 3000,
+    "priceTo": 4300,
+    "durationMinutes": 140
+  },
+  {
+    "id": "dog-labrador-care",
+    "petType": "dog",
+    "breed": "Лабрадор",
+    "size": "large",
+    "serviceCategory": "Уход",
+    "serviceName": "Купание, сушка и вычес",
+    "priceFrom": 4200,
+    "priceTo": 5600,
+    "durationMinutes": 160
+  },
+  {
+    "id": "dog-husky-care",
+    "petType": "dog",
+    "breed": "Хаски",
+    "size": "large",
+    "coatType": "плотный подшерсток",
+    "serviceCategory": "Вычесывание",
+    "serviceName": "Глубокий вычес и купание",
+    "priceFrom": 5200,
+    "priceTo": 7600,
+    "durationMinutes": 210
+  },
+  {
+    "id": "cat-home-care",
+    "petType": "cat",
+    "breed": "Домашняя кошка",
+    "serviceCategory": "Кошки",
+    "serviceName": "Вычесывание и гигиена",
+    "priceFrom": 1500,
+    "priceTo": 2600,
+    "durationMinutes": 90
+  },
+  {
+    "id": "cat-british-care",
+    "petType": "cat",
+    "breed": "Британская",
+    "coatType": "плотная шерсть",
+    "serviceCategory": "Кошки",
+    "serviceName": "Купание и вычес",
+    "priceFrom": 2200,
+    "priceTo": 3400,
+    "durationMinutes": 110
+  },
+  {
+    "id": "cat-maine-coon",
+    "petType": "cat",
+    "breed": "Мейн-кун",
+    "size": "large",
+    "serviceCategory": "Кошки",
+    "serviceName": "Комплексный уход",
+    "priceFrom": 3200,
+    "priceTo": 5200,
+    "durationMinutes": 150
+  },
+  {
+    "id": "cat-persian",
+    "petType": "cat",
+    "breed": "Персидская",
+    "coatType": "длинная шерсть",
+    "serviceCategory": "Кошки",
+    "serviceName": "Вычес и удаление колтунов",
+    "priceFrom": 2800,
+    "priceTo": 4800,
+    "durationMinutes": 140,
+    "notes": "Стоимость зависит от количества колтунов."
+  }
+]

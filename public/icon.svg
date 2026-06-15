@@ -1,0 +1,11 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title>Место — иконка</title>
+  <desc>Минималистичный знак груминг-студии Место: буква М, лапка и сердце.</desc>
+  <rect width="512" height="512" rx="96" fill="#FFFFFF"/>
+  <path d="M128 304V140c0-19 24-27 36-12l92 120 92-120c12-15 36-7 36 12v164c0 15-12 27-27 27s-27-12-27-27V216l-52 68c-11 15-33 15-44 0l-52-68v88c0 15-12 27-27 27s-27-12-27-27Z" fill="#5DBFA6"/>
+  <ellipse cx="174" cy="356" rx="27" ry="32" fill="#5DBFA6"/>
+  <ellipse cx="225" cy="338" rx="28" ry="35" fill="#5DBFA6"/>
+  <ellipse cx="287" cy="338" rx="28" ry="35" fill="#5DBFA6"/>
+  <ellipse cx="338" cy="356" rx="27" ry="32" fill="#5DBFA6"/>
+  <path d="M256 432c-54-35-86-61-86-96 0-24 18-42 41-42 18 0 34 10 45 25 11-15 27-25 45-25 23 0 41 18 41 42 0 35-32 61-86 96Z" fill="#FF725E"/>
+</svg>

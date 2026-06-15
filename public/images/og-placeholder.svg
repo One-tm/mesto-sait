@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#EAF7F2"/>
+  <circle cx="1010" cy="120" r="120" fill="#FFE8E2"/>
+  <circle cx="180" cy="510" r="90" fill="#FFFFFF"/>
+  <text x="96" y="240" font-family="Arial, sans-serif" font-size="88" font-weight="700" fill="#254D43">Место</text>
+  <text x="100" y="326" font-family="Arial, sans-serif" font-size="38" fill="#26322F">студия груминга для собак и кошек</text>
+  <text x="100" y="390" font-family="Arial, sans-serif" font-size="30" fill="#6E7C78">Бережно, спокойно, понятно</text>
+  <path d="M760 472c-18-92 25-164 111-174 85-10 153 52 155 139 2 89-61 146-145 138-58-6-104-40-121-103Z" fill="#FF725E"/>
+  <circle cx="886" cy="384" r="20" fill="#26322F"/>
+  <circle cx="976" cy="399" r="17" fill="#26322F"/>
+  <path d="M922 438c26 20 53 20 78 0" stroke="#26322F" stroke-width="12" stroke-linecap="round" fill="none"/>
+</svg>

@@ -1,0 +1,29 @@
+import { About } from "@/components/About";
+import { Benefits } from "@/components/Benefits";
+import { FinalCTA } from "@/components/FinalCTA";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { PricePreview } from "@/components/PricePreview";
+import { PromoOffers } from "@/components/PromoOffers";
+import { Reviews } from "@/components/Reviews";
+import { Services } from "@/components/Services";
+
+export default function HomePage() {
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Benefits />
+        <PromoOffers />
+        <Services />
+        <PricePreview />
+        <About />
+        <Reviews />
+        <FinalCTA />
+      </main>
+      <Footer />
+    </>
+  );
+}
