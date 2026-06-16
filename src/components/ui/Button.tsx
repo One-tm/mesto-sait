@@ -6,6 +6,8 @@ const variants = {
     "bg-coral text-white shadow-card hover:bg-[#f35f4b] focus-ring",
   secondary:
     "border border-line bg-white text-mint-dark hover:border-mint hover:bg-paper-mint focus-ring",
+  contrast:
+    "border border-white bg-white text-ink shadow-card hover:bg-paper-mint focus-ring",
   ghost: "text-mint-dark hover:bg-paper-mint focus-ring"
 };
 

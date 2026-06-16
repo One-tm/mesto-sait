@@ -24,6 +24,10 @@ function displayBreedName(breed: string) {
   return breed === "Папийон (Папильон)" ? "Папийон" : breed;
 }
 
+function getBreedPriceHref(group: (typeof dogPriceGroups)[number]) {
+  return `/price?breed=${encodeURIComponent(group.breed)}#breed-${group.id}`;
+}
+
 export function PricePreview() {
   const previewSections = priorityBreedSections;
 
@@ -37,7 +41,7 @@ export function PricePreview() {
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {previewSections.map((section) => {
             const target = getPreviewTarget(section.breedNames);
-            const href = target ? `/price?breed=${encodeURIComponent(target.group.breed)}` : "/price";
+            const href = target ? getBreedPriceHref(target.group) : "/price";
 
             return (
             <a key={section.title} href={href} className="focus-ring rounded-3xl border border-line bg-paper p-5 transition hover:-translate-y-1 hover:bg-paper-mint hover:shadow-card">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ChevronDown, Info, ListFilter, PawPrint, Search, Sparkles } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
@@ -52,6 +52,10 @@ function getTopBreedService(groups: DogPriceGroup[]) {
 
 function serviceLabel(name: string, hasNote?: boolean) {
   return `${name}${hasNote ? "*" : ""}`;
+}
+
+function getBreedCardId(group: GenericPriceGroup) {
+  return `breed-${group.id}`;
 }
 
 function BreedServiceRows({ group }: { group: GenericPriceGroup }) {
@@ -138,13 +142,32 @@ export function PriceList() {
 
   const hasSearch = query.trim().length > 0 || serviceName !== "all";
   const noteText = serviceNote.replace(/^\*\s*/, "");
+
+  useEffect(() => {
+    if (!initialBreed) {
+      return;
+    }
+
+    const selectedGroup = dogByBreed.get(initialBreed);
+    const targetId = window.location.hash.slice(1) || (selectedGroup ? getBreedCardId(selectedGroup) : "all-dog-prices");
+
+    window.setTimeout(() => {
+      document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 0);
+  }, [dogByBreed, initialBreed]);
+
   const selectBreed = (breed: string) => {
+    const selectedGroup = dogByBreed.get(breed);
+    const targetId = selectedGroup ? getBreedCardId(selectedGroup) : "all-dog-prices";
+
     setQuery(breed);
     setServiceName("all");
     setIsBreedListOpen(false);
     setIsBreedListFiltered(false);
-    router.push(`/price?breed=${encodeURIComponent(breed)}`, { scroll: false });
-    document.getElementById("all-dog-prices")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    router.push(`/price?breed=${encodeURIComponent(breed)}#${targetId}`, { scroll: false });
+    window.setTimeout(() => {
+      document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 0);
   };
   const selectService = (nextServiceName: string) => {
     setServiceName(nextServiceName);
@@ -173,7 +196,16 @@ export function PriceList() {
             const top = getTopBreedService(groups);
 
             return (
-              <article key={section.title} className="rounded-3xl border border-line bg-white p-5 shadow-sm">
+              <button
+                key={section.title}
+                type="button"
+                onClick={() => {
+                  if (top) {
+                    selectBreed(top.group.breed);
+                  }
+                }}
+                className="focus-ring rounded-3xl border border-line bg-white p-5 text-left shadow-sm transition hover:-translate-y-1 hover:bg-paper-mint hover:shadow-card"
+              >
                 <div className="mb-4">
                   <div>
                     <h3 className="text-xl font-semibold text-ink">{displayBreedTitle(section.title)}</h3>
@@ -183,11 +215,7 @@ export function PriceList() {
                   </div>
                 </div>
                 {top ? (
-                    <button
-                      type="button"
-                      onClick={() => selectBreed(top.group.breed)}
-                      className="focus-ring block w-full rounded-2xl bg-paper px-4 py-3 text-left transition hover:bg-paper-mint"
-                    >
+                    <div className="block w-full rounded-2xl bg-paper px-4 py-3">
                       <div className="flex items-start justify-between gap-3">
                         <span className="text-sm font-semibold text-ink">{serviceLabel(top.service.name, top.service.hasNote)}</span>
                         <span className="whitespace-nowrap text-sm font-semibold text-mint-dark">
@@ -197,9 +225,9 @@ export function PriceList() {
                       <p className="mt-1 text-xs leading-5 text-muted">
                         Перейти к услугам: {displayBreedName(top.group.breed)}
                       </p>
-                    </button>
+                    </div>
                 ) : null}
-              </article>
+              </button>
             );
           })}
         </div>
@@ -375,7 +403,8 @@ export function PriceList() {
           {filteredDogGroups.map((group) => (
             <details
               key={group.id}
-              className="group rounded-3xl border border-line bg-white p-5 shadow-sm open:shadow-card"
+              id={getBreedCardId(group)}
+              className="group scroll-mt-28 rounded-3xl border border-line bg-white p-5 shadow-sm open:shadow-card"
               open
             >
               <summary className="flex cursor-pointer list-none items-start justify-between gap-4">
@@ -411,6 +440,12 @@ export function PriceList() {
         {hasSearch && filteredDogGroups.length === 0 ? (
           <div className="mt-6 rounded-3xl border border-line bg-white p-8 text-center text-muted">
             По этим фильтрам ничего не найдено. Попробуйте изменить запрос или выбрать другую услугу.
+          </div>
+        ) : null}
+
+        {hasSearch && filteredDogGroups.length > 0 ? (
+          <div className="mt-6 flex justify-center">
+            <BookingButton label="Записаться" />
           </div>
         ) : null}
       </section>

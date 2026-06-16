@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { YclientsScript } from "@/components/YclientsScript";
 import { YandexMetrika } from "@/components/YandexMetrika";
 
 export const metadata: Metadata = {
@@ -39,7 +38,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="ru">
       <body>
         <YandexMetrika />
-        <YclientsScript />
         {children}
         <noscript>
           <div>
