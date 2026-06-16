@@ -56,7 +56,7 @@ export function PromoOffers() {
 
             <div className="flex flex-col gap-3">
               <BookingButton label="Записаться со скидкой" />
-              <Button href={contacts.telegram} variant="contrast">
+              <Button href={contacts.telegram}>
                 Уточнить условия
               </Button>
               <p className="max-w-64 text-xs leading-5 text-white/70">
