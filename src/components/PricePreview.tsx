@@ -6,8 +6,11 @@ import { Button } from "@/components/ui/Button";
 
 const formatRub = (value: number) => `${value.toLocaleString("ru-RU")} ₽`;
 const dogByBreed = new Map<string, (typeof dogPriceGroups)[number]>(dogPriceGroups.map((group) => [group.breed, group]));
+type PrioritySection = (typeof priorityBreedSections)[number];
 
-function getPreviewTarget(breedNames: readonly string[]) {
+function getPreviewTarget(section: PrioritySection) {
+  const featuredBreedName = "featuredBreedName" in section ? section.featuredBreedName : undefined;
+  const breedNames = featuredBreedName ? [featuredBreedName] : section.breedNames;
   const groups = breedNames.map((breedName) => dogByBreed.get(breedName)).filter(Boolean);
   const ranked = groups
     .flatMap((group) => group!.services.map((service) => ({ group: group!, service })))
@@ -24,8 +27,8 @@ function displayBreedName(breed: string) {
   return breed === "Папийон (Папильон)" ? "Папийон" : breed;
 }
 
-function getBreedPriceHref(group: (typeof dogPriceGroups)[number]) {
-  return `/price?breed=${encodeURIComponent(group.breed)}#breed-${group.id}`;
+function getSectionPriceHref(section: PrioritySection) {
+  return `/price?section=${encodeURIComponent(section.title)}#all-dog-prices`;
 }
 
 export function PricePreview() {
@@ -40,8 +43,8 @@ export function PricePreview() {
         />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {previewSections.map((section) => {
-            const target = getPreviewTarget(section.breedNames);
-            const href = target ? getBreedPriceHref(target.group) : "/price";
+            const target = getPreviewTarget(section);
+            const href = target ? getSectionPriceHref(section) : "/price";
 
             return (
             <a key={section.title} href={href} className="focus-ring rounded-3xl border border-line bg-paper p-5 transition hover:-translate-y-1 hover:bg-paper-mint hover:shadow-card">

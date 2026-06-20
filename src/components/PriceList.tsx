@@ -23,6 +23,7 @@ type GenericPriceGroup = {
     hasNote?: boolean;
   }[];
 };
+type PrioritySection = (typeof priorityBreedSections)[number];
 
 const formatRub = (value: number) => `${value.toLocaleString("ru-RU")} ₽`;
 const normalize = (value: string) => value.toLowerCase().replace("ё", "е").trim();
@@ -44,10 +45,16 @@ function getMinPrice(group: GenericPriceGroup) {
   return Math.min(...group.services.map((service) => service.price));
 }
 
-function getTopBreedService(groups: DogPriceGroup[]) {
-  return groups
+function getTopBreedService(groups: DogPriceGroup[], featuredBreedName?: string) {
+  const targetGroups = featuredBreedName ? groups.filter((group) => group.breed === featuredBreedName) : groups;
+
+  return targetGroups
     .flatMap((group) => group.services.map((service) => ({ group, service })))
     .sort((a, b) => b.service.price - a.service.price)[0];
+}
+
+function getFeaturedBreedName(section: PrioritySection) {
+  return "featuredBreedName" in section ? section.featuredBreedName : undefined;
 }
 
 function serviceLabel(name: string, hasNote?: boolean) {
@@ -78,7 +85,9 @@ export function PriceList() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const initialBreed = searchParams.get("breed") ?? "";
+  const initialSectionTitle = searchParams.get("section") ?? "";
   const [query, setQuery] = useState(initialBreed);
+  const [sectionTitle, setSectionTitle] = useState(initialSectionTitle);
   const [serviceName, setServiceName] = useState("all");
   const [isBreedListOpen, setIsBreedListOpen] = useState(false);
   const [isBreedListFiltered, setIsBreedListFiltered] = useState(false);
@@ -102,6 +111,10 @@ export function PriceList() {
   }, [breedOptions, isBreedListFiltered, query]);
 
   const selectedServiceLabel = serviceName === "all" ? "Все услуги" : serviceName;
+  const selectedSection = useMemo(
+    () => priorityBreedSections.find((section) => section.title === sectionTitle),
+    [sectionTitle]
+  );
 
   const sortedDogGroups = useMemo(
     () =>
@@ -120,6 +133,7 @@ export function PriceList() {
 
   const filteredDogGroups = useMemo(() => {
     const preparedQuery = normalize(query);
+    const sectionBreedNames = selectedSection ? new Set<string>(selectedSection.breedNames) : null;
 
     return sortedDogGroups
       .map((group) => ({
@@ -131,19 +145,27 @@ export function PriceList() {
       }))
       .filter((group) => {
         const matchesService = group.services.length > 0;
+        const matchesSection = !sectionBreedNames || sectionBreedNames.has(group.breed);
         const matchesQuery =
           !preparedQuery ||
           normalize(group.breed).includes(preparedQuery) ||
           group.services.some((service) => normalize(service.name).includes(preparedQuery));
 
-        return matchesService && matchesQuery;
+        return matchesService && matchesSection && matchesQuery;
       });
-  }, [query, serviceName, sortedDogGroups]);
+  }, [query, selectedSection, serviceName, sortedDogGroups]);
 
-  const hasSearch = query.trim().length > 0 || serviceName !== "all";
+  const hasSearch = query.trim().length > 0 || sectionTitle.length > 0 || serviceName !== "all";
   const noteText = serviceNote.replace(/^\*\s*/, "");
 
   useEffect(() => {
+    if (initialSectionTitle) {
+      window.setTimeout(() => {
+        document.getElementById("all-dog-prices")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 0);
+      return;
+    }
+
     if (!initialBreed) {
       return;
     }
@@ -154,19 +176,31 @@ export function PriceList() {
     window.setTimeout(() => {
       document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 0);
-  }, [dogByBreed, initialBreed]);
+  }, [dogByBreed, initialBreed, initialSectionTitle]);
 
   const selectBreed = (breed: string) => {
     const selectedGroup = dogByBreed.get(breed);
     const targetId = selectedGroup ? getBreedCardId(selectedGroup) : "all-dog-prices";
 
     setQuery(breed);
+    setSectionTitle("");
     setServiceName("all");
     setIsBreedListOpen(false);
     setIsBreedListFiltered(false);
     router.push(`/price?breed=${encodeURIComponent(breed)}#${targetId}`, { scroll: false });
     window.setTimeout(() => {
       document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 0);
+  };
+  const selectSection = (section: PrioritySection) => {
+    setQuery("");
+    setSectionTitle(section.title);
+    setServiceName("all");
+    setIsBreedListOpen(false);
+    setIsBreedListFiltered(false);
+    router.push(`/price?section=${encodeURIComponent(section.title)}#all-dog-prices`, { scroll: false });
+    window.setTimeout(() => {
+      document.getElementById("all-dog-prices")?.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 0);
   };
   const selectService = (nextServiceName: string) => {
@@ -193,7 +227,7 @@ export function PriceList() {
             const groups = section.breedNames
               .map((breedName) => dogByBreed.get(breedName))
               .filter(Boolean) as DogPriceGroup[];
-            const top = getTopBreedService(groups);
+            const top = getTopBreedService(groups, getFeaturedBreedName(section));
 
             return (
               <button
@@ -201,7 +235,7 @@ export function PriceList() {
                 type="button"
                 onClick={() => {
                   if (top) {
-                    selectBreed(top.group.breed);
+                    selectSection(section);
                   }
                 }}
                 className="focus-ring rounded-3xl border border-line bg-white p-5 text-left shadow-sm transition hover:-translate-y-1 hover:bg-paper-mint hover:shadow-card"
@@ -255,6 +289,7 @@ export function PriceList() {
                 value={query}
                 onChange={(event) => {
                   setQuery(event.target.value);
+                  setSectionTitle("");
                   setIsBreedListOpen(true);
                   setIsBreedListFiltered(true);
                   if (!event.target.value.trim()) {

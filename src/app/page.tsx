@@ -8,6 +8,7 @@ import { PricePreview } from "@/components/PricePreview";
 import { PromoOffers } from "@/components/PromoOffers";
 import { Reviews } from "@/components/Reviews";
 import { Services } from "@/components/Services";
+import { TelegramChannel } from "@/components/TelegramChannel";
 
 export default function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default function HomePage() {
         <PricePreview />
         <About />
         <Reviews />
+        <TelegramChannel />
         <FinalCTA />
       </main>
       <Footer />

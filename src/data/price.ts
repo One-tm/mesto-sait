@@ -43,11 +43,13 @@ export type AdditionalPriceItem = {
 export type PriorityBreedSection = {
   title: string;
   breedNames: string[];
+  featuredBreedName?: string;
 };
 
 export const priorityBreedSections = [
   {
     "title": "Пудель",
+    "featuredBreedName": "Пудель той до 28 см",
     "breedNames": [
       "Пудель королевский от 45 см",
       "Пудель малый (средний) от 36 до 45 см",
@@ -64,6 +66,7 @@ export const priorityBreedSections = [
   },
   {
     "title": "Шпиц",
+    "featuredBreedName": "Шпиц до 24 см",
     "breedNames": [
       "Шпиц до 24 см",
       "Шпиц от 24 до 30 см",
