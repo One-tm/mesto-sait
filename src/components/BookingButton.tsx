@@ -15,29 +15,21 @@ export function BookingButton({
   className,
   size = "md"
 }: BookingButtonProps) {
-  const openWidget = () => {
-    const win = window as Window & {
-      yclients?: { open?: () => void };
-      Yclients?: { open?: () => void };
-    };
-
-    if (win.yclients?.open) {
-      win.yclients.open();
-      return;
-    }
-
-    if (win.Yclients?.open) {
-      win.Yclients.open();
-      return;
-    }
-
-    window.open(contacts.telegram, "_blank", "noopener,noreferrer");
-  };
+  const isCompact = size === "sm";
+  const telegramLabel = isCompact ? "Записаться TG" : "Записаться Telegram";
+  const maxLabel = "MAX";
+  const buttonClass = isCompact ? "px-3" : "";
 
   return (
-    <Button type="button" size={size} onClick={openWidget} className={className}>
-      <CalendarCheck size={18} aria-hidden />
-      {label}
-    </Button>
+    <div className={["inline-flex flex-wrap items-center gap-2", className].filter(Boolean).join(" ")}>
+      <Button href={contacts.telegram} size={size} className={buttonClass} aria-label={`${label} через Telegram`}>
+        <CalendarCheck size={18} aria-hidden />
+        {telegramLabel}
+      </Button>
+      <Button href={contacts.max} size={size} className={buttonClass} aria-label={`${label} через MAX`}>
+        <CalendarCheck size={18} aria-hidden />
+        {maxLabel}
+      </Button>
+    </div>
   );
 }
