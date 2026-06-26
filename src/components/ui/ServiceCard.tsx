@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 
 type ServiceCardProps = {
@@ -7,11 +8,12 @@ type ServiceCardProps = {
   price?: string;
   Icon: LucideIcon;
   image: string;
+  href?: string;
 };
 
-export function ServiceCard({ title, Icon, image }: ServiceCardProps) {
+export function ServiceCard({ title, Icon, image, href = "/price/#service-descriptions" }: ServiceCardProps) {
   return (
-    <article className="soft-card grid min-h-[164px] grid-cols-[46%_1fr] overflow-hidden rounded-[18px] transition hover:-translate-y-1 hover:shadow-soft">
+    <Link href={href} className="soft-card focus-ring grid min-h-[164px] grid-cols-[46%_1fr] overflow-hidden rounded-[18px] transition hover:-translate-y-1 hover:shadow-soft">
       <div className="relative min-h-[164px] bg-paper-mint">
         <Image src={image} alt="" fill sizes="(max-width: 768px) 45vw, 220px" className="object-cover" />
       </div>
@@ -21,6 +23,6 @@ export function ServiceCard({ title, Icon, image }: ServiceCardProps) {
         </div>
         <h3 className="pl-2 text-lg font-semibold leading-6 text-ink">{title}</h3>
       </div>
-    </article>
+    </Link>
   );
 }

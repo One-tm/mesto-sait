@@ -7,7 +7,7 @@ export function Services() {
       <div className="container">
         <div className="mb-7 flex items-end justify-center gap-4 sm:justify-between">
           <h2 className="text-center text-3xl font-semibold text-ink md:text-4xl">Наши услуги ♡</h2>
-          <a href="/price" className="hidden text-sm font-semibold text-mint-dark hover:text-coral sm:inline-flex">
+          <a href="/price/#service-descriptions" className="hidden text-sm font-semibold text-mint-dark hover:text-coral sm:inline-flex">
             Все услуги →
           </a>
         </div>
