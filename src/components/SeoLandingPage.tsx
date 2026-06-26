@@ -59,14 +59,14 @@ function servicePriceRows(serviceName: string) {
 
 function Breadcrumbs({ items }: { items: { href: string; label: string }[] }) {
   return (
-    <nav className="mb-8 flex flex-wrap items-center gap-2 text-sm text-muted" aria-label="Хлебные крошки">
-      <Link href="/" className="hover:text-mint-dark">
+    <nav className="mb-8 flex flex-wrap items-center gap-1 text-sm text-muted sm:gap-2" aria-label="Хлебные крошки">
+      <Link href="/" className="focus-ring rounded-full bg-paper px-3 py-2 font-semibold hover:text-mint-dark sm:bg-transparent sm:px-0 sm:py-0 sm:font-normal">
         Главная
       </Link>
       {items.map((item) => (
-        <span key={item.href} className="inline-flex items-center gap-2">
-          <ChevronRight size={14} aria-hidden />
-          <Link href={item.href} className="hover:text-mint-dark">
+        <span key={item.href} className="inline-flex items-center gap-1 sm:gap-2">
+          <ChevronRight size={14} aria-hidden className="shrink-0" />
+          <Link href={item.href} className="focus-ring rounded-full bg-paper px-3 py-2 font-semibold hover:text-mint-dark sm:bg-transparent sm:px-0 sm:py-0 sm:font-normal">
             {item.label}
           </Link>
         </span>

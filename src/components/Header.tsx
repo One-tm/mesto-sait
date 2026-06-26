@@ -20,7 +20,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 bg-white/85 backdrop-blur-xl">
-      <div className="container flex min-h-[86px] items-center justify-between gap-4">
+      <div className="container flex min-h-[76px] items-center justify-between gap-4 lg:min-h-[86px]">
         <Link href="/" className="focus-ring rounded-xl">
           <span className="logo-script block text-5xl font-semibold leading-none text-mint">Место</span>
           <span className="block pl-1 text-[11px] uppercase tracking-[0.32em] text-muted">студия груминга</span>
@@ -57,17 +57,20 @@ export function Header() {
           </a>
         </div>
 
-        <div className="flex items-center gap-2 lg:hidden">
-          <BookingButton label="Записаться" size="sm" />
+        <div className="flex shrink-0 items-center gap-2 lg:hidden">
           <button
             type="button"
-            className="focus-ring flex h-11 w-11 items-center justify-center rounded-full border border-line bg-white text-mint-dark"
+            className="focus-ring flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line bg-white text-mint-dark"
             onClick={() => setIsOpen((value) => !value)}
             aria-label={isOpen ? "Закрыть меню" : "Открыть меню"}
           >
             {isOpen ? <X size={21} aria-hidden /> : <Menu size={21} aria-hidden />}
           </button>
         </div>
+      </div>
+
+      <div className="container pb-3 lg:hidden">
+        <BookingButton label="Записаться" size="sm" className="w-full [&>a]:min-w-0 [&>a]:flex-1" />
       </div>
 
       {isOpen ? (
