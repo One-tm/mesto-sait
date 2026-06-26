@@ -86,6 +86,7 @@ export function PriceList() {
   const router = useRouter();
   const initialBreed = searchParams.get("breed") ?? "";
   const initialSectionTitle = searchParams.get("section") ?? "";
+  const breedFilterRef = useRef<HTMLDivElement>(null);
   const breedSearchRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState(initialBreed);
   const [sectionTitle, setSectionTitle] = useState(initialSectionTitle);
@@ -211,7 +212,11 @@ export function PriceList() {
   const openBreedSearch = () => {
     setIsBreedListOpen(true);
     setIsBreedListFiltered(false);
-    breedSearchRef.current?.focus();
+    breedFilterRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    window.setTimeout(() => {
+      setIsBreedListOpen(true);
+      breedSearchRef.current?.focus({ preventScroll: true });
+    }, 120);
   };
 
   return (
@@ -277,6 +282,7 @@ export function PriceList() {
         <div className="rounded-3xl border border-coral/25 bg-coral-soft/70 p-4 shadow-soft ring-1 ring-white/80">
           <div className="grid gap-3 lg:grid-cols-2">
             <div
+              ref={breedFilterRef}
               className="relative"
               onBlur={(event) => {
                 const nextTarget = event.relatedTarget;
@@ -471,6 +477,7 @@ export function PriceList() {
         ) : (
           <button
             type="button"
+            onMouseDown={(event) => event.preventDefault()}
             onClick={openBreedSearch}
             className="focus-ring mt-5 block w-full rounded-3xl border border-dashed border-line bg-white p-8 text-center shadow-sm transition hover:border-mint hover:bg-paper-mint"
             aria-label="Открыть список пород"
