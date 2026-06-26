@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { breedLandingPages, serviceLandingPages } from "@/data/seoPages";
 
 export const dynamic = "force-static";
 
@@ -17,6 +18,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "weekly",
       priority: 0.8
-    }
+    },
+    ...breedLandingPages.map((page) => ({
+      url: `https://mestogroom.ru/breeds/${page.slug}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.75
+    })),
+    ...serviceLandingPages.map((page) => ({
+      url: `https://mestogroom.ru/services/${page.slug}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.75
+    }))
   ];
 }

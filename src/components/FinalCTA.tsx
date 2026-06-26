@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { BookingButton } from "@/components/BookingButton";
-import { Button } from "@/components/ui/Button";
 import { contacts } from "@/data/contacts";
+import { MetrikaGoalLink } from "@/components/MetrikaGoalLink";
 
 export function FinalCTA() {
   return (
@@ -19,14 +19,26 @@ export function FinalCTA() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <BookingButton size="lg" />
-            <Button href={contacts.telegram} variant="secondary" size="lg">
+            <MetrikaGoalLink
+              href={contacts.telegram}
+              goal="contact_telegram"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-line bg-white px-6 text-base font-semibold text-mint-dark transition hover:border-mint hover:bg-paper-mint"
+            >
               <MessageCircle size={18} aria-hidden />
               Написать в Telegram
-            </Button>
-            <Button href={contacts.max} variant="secondary" size="lg">
+            </MetrikaGoalLink>
+            <MetrikaGoalLink
+              href={contacts.max}
+              goal="contact_max"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-line bg-white px-6 text-base font-semibold text-mint-dark transition hover:border-mint hover:bg-paper-mint"
+            >
               <MessageCircle size={18} aria-hidden />
               Написать в MAX
-            </Button>
+            </MetrikaGoalLink>
           </div>
         </div>
       </div>

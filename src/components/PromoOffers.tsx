@@ -1,7 +1,7 @@
 import { BadgePercent, CalendarClock, Gift, Sparkles } from "lucide-react";
 import { BookingButton } from "@/components/BookingButton";
-import { Button } from "@/components/ui/Button";
 import { contacts } from "@/data/contacts";
+import { MetrikaGoalLink } from "@/components/MetrikaGoalLink";
 
 const offers = [
   {
@@ -56,9 +56,15 @@ export function PromoOffers() {
 
             <div className="flex flex-col gap-3">
               <BookingButton label="Записаться со скидкой" />
-              <Button href={contacts.telegram}>
+              <MetrikaGoalLink
+                href={contacts.telegram}
+                goal="promo_conditions_click"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-coral px-5 text-sm font-semibold text-white shadow-card transition hover:bg-[#f35f4b]"
+              >
                 Уточнить условия
-              </Button>
+              </MetrikaGoalLink>
               <p className="max-w-64 text-xs leading-5 text-white/70">
                 Скидки не суммируются с другими акциями. Итоговую стоимость и применимость
                 предложения подтвердит администратор.

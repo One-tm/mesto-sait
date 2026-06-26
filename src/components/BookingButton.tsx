@@ -3,6 +3,7 @@
 import { CalendarCheck } from "lucide-react";
 import { contacts } from "@/data/contacts";
 import { Button } from "@/components/ui/Button";
+import { reachGoal } from "@/lib/metrika";
 
 type BookingButtonProps = {
   label?: string;
@@ -22,11 +23,23 @@ export function BookingButton({
 
   return (
     <div className={["inline-flex flex-wrap items-center gap-2", className].filter(Boolean).join(" ")}>
-      <Button href={contacts.telegram} size={size} className={buttonClass} aria-label={`${label} через Telegram`}>
+      <Button
+        href={contacts.telegram}
+        size={size}
+        className={buttonClass}
+        aria-label={`${label} через Telegram`}
+        onClick={() => reachGoal("booking_telegram")}
+      >
         <CalendarCheck size={18} aria-hidden />
         {telegramLabel}
       </Button>
-      <Button href={contacts.max} size={size} className={buttonClass} aria-label={`${label} через MAX`}>
+      <Button
+        href={contacts.max}
+        size={size}
+        className={buttonClass}
+        aria-label={`${label} через MAX`}
+        onClick={() => reachGoal("booking_max")}
+      >
         <CalendarCheck size={18} aria-hidden />
         {maxLabel}
       </Button>

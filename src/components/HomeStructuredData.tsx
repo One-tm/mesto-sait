@@ -19,7 +19,7 @@ export function HomeStructuredData() {
         email: contacts.email,
         priceRange: "₽₽",
         description:
-          "Студия груминга для собак и кошек в Москве: комплексный уход, стрижка, гигиена, экспресс-линька и бережная работа с питомцами.",
+          `Студия груминга для собак и кошек в Москве: комплексный уход, стрижка, гигиена, экспресс-линька и бережная работа с питомцами. ${contacts.nearbyTransit}.`,
         address: {
           "@type": "PostalAddress",
           addressCountry: "RU",

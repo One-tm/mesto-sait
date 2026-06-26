@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { BookingButton } from "@/components/BookingButton";
 import { contacts } from "@/data/contacts";
+import { reachGoal } from "@/lib/metrika";
 
 const nav = [
   { href: "/#services", label: "Услуги" },
@@ -34,7 +35,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-5 lg:flex">
-          <a href={contacts.phoneHref} className="flex items-center gap-3 text-sm font-semibold text-ink">
+          <a href={contacts.phoneHref} className="flex items-center gap-3 text-sm font-semibold text-ink" onClick={() => reachGoal("phone_click")}>
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-paper-mint text-mint">
               <Phone size={17} aria-hidden />
             </span>
@@ -50,6 +51,7 @@ export function Header() {
             rel="noopener noreferrer"
             className="focus-ring flex h-11 w-11 items-center justify-center rounded-full bg-paper-mint text-mint"
             aria-label="Telegram"
+            onClick={() => reachGoal("contact_telegram")}
           >
             <Heart size={18} aria-hidden />
           </a>
@@ -81,16 +83,16 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <a href={contacts.phoneHref} className="rounded-2xl bg-paper px-4 py-3 font-semibold text-mint-dark">
+            <a href={contacts.phoneHref} className="rounded-2xl bg-paper px-4 py-3 font-semibold text-mint-dark" onClick={() => reachGoal("phone_click")}>
               {contacts.phoneDisplay}
             </a>
-            <a href={contacts.telegram} target="_blank" rel="noopener noreferrer" className="rounded-2xl bg-paper px-4 py-3">
+            <a href={contacts.telegram} target="_blank" rel="noopener noreferrer" className="rounded-2xl bg-paper px-4 py-3" onClick={() => reachGoal("contact_telegram")}>
               Telegram
             </a>
-            <a href={contacts.max} target="_blank" rel="noopener noreferrer" className="rounded-2xl bg-paper px-4 py-3">
+            <a href={contacts.max} target="_blank" rel="noopener noreferrer" className="rounded-2xl bg-paper px-4 py-3" onClick={() => reachGoal("contact_max")}>
               MAX
             </a>
-            <a href={contacts.yandexMaps} target="_blank" rel="noopener noreferrer" className="rounded-2xl bg-paper px-4 py-3">
+            <a href={contacts.yandexMaps} target="_blank" rel="noopener noreferrer" className="rounded-2xl bg-paper px-4 py-3" onClick={() => reachGoal("yandex_maps_click")}>
               Яндекс-Карты
             </a>
           </div>

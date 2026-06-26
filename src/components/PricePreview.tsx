@@ -1,5 +1,6 @@
 import { ArrowRight, PawPrint } from "lucide-react";
 import { dogPriceGroups, priorityBreedSections } from "@/data/price";
+import { breedLandingPages } from "@/data/seoPages";
 import { BookingButton } from "@/components/BookingButton";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { Button } from "@/components/ui/Button";
@@ -67,6 +68,17 @@ export function PricePreview() {
             </a>
             );
           })}
+        </div>
+        <div className="mt-6 flex flex-wrap justify-center gap-2">
+          {breedLandingPages.slice(0, 9).map((page) => (
+            <a
+              key={page.slug}
+              href={`/breeds/${page.slug}`}
+              className="focus-ring rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold text-mint-dark transition hover:border-mint hover:bg-paper-mint"
+            >
+              {page.title}
+            </a>
+          ))}
         </div>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Button href="/price" variant="secondary">

@@ -1,6 +1,6 @@
 import { ArrowRight, Bell, Images, Send, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/Button";
 import { contacts } from "@/data/contacts";
+import { MetrikaGoalLink } from "@/components/MetrikaGoalLink";
 
 const channelHighlights = [
   {
@@ -40,10 +40,16 @@ export function TelegramChannel() {
               </div>
             </div>
 
-            <Button href={contacts.telegramChannel} size="lg" className="w-full sm:w-auto">
+            <MetrikaGoalLink
+              href={contacts.telegramChannel}
+              goal="telegram_channel_click"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-coral px-6 text-base font-semibold text-white shadow-card transition hover:bg-[#f35f4b] sm:w-auto"
+            >
               Подписаться
               <ArrowRight size={18} aria-hidden />
-            </Button>
+            </MetrikaGoalLink>
           </div>
 
           <div className="mt-6 grid gap-3 sm:grid-cols-3">

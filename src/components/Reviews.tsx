@@ -3,7 +3,7 @@ import { reviews } from "@/data/reviews";
 import { contacts } from "@/data/contacts";
 import { ReviewCard } from "@/components/ui/ReviewCard";
 import { SectionTitle } from "@/components/ui/SectionTitle";
-import { Button } from "@/components/ui/Button";
+import { MetrikaGoalLink } from "@/components/MetrikaGoalLink";
 
 export function Reviews() {
   return (
@@ -19,10 +19,16 @@ export function Reviews() {
           ))}
         </div>
         <div className="mt-8 text-center">
-          <Button href={contacts.yandexMaps} variant="secondary">
+          <MetrikaGoalLink
+            href={contacts.yandexMaps}
+            goal="yandex_maps_click"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-line bg-white px-5 text-sm font-semibold text-mint-dark transition hover:border-mint hover:bg-paper-mint"
+          >
             <ExternalLink size={18} aria-hidden />
             Посмотреть нас на Яндекс-Картах
-          </Button>
+          </MetrikaGoalLink>
         </div>
       </div>
     </section>

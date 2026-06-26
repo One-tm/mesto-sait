@@ -4,6 +4,8 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { PriceList } from "@/components/PriceList";
 import { PriceStructuredData } from "@/components/PriceStructuredData";
+import { contacts } from "@/data/contacts";
+import { MetrikaPageGoal } from "@/components/MetrikaPageGoal";
 
 export const metadata: Metadata = {
   title: {
@@ -33,6 +35,7 @@ export const metadata: Metadata = {
 export default function PricePage() {
   return (
     <>
+      <MetrikaPageGoal goal="price_view" />
       <PriceStructuredData />
       <Header />
       <main className="section-pad">
@@ -52,6 +55,9 @@ export default function PricePage() {
             <p className="mt-4 text-base leading-7 text-muted">
               В прайсе собраны цены на груминг собак по породам в Москве, услуги для кошек и дополнительные процедуры.
               Итоговая стоимость зависит от размера питомца, состояния шерсти, колтунов и поведения во время ухода.
+            </p>
+            <p className="mt-3 text-base leading-7 text-muted">
+              Студия находится по адресу {contacts.address}: {contacts.nearbyTransit.toLowerCase()}.
             </p>
           </div>
           <Suspense fallback={<div className="mt-10 rounded-3xl border border-line bg-white p-8 text-muted">Загружаем прайс...</div>}>
