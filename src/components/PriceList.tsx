@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronDown, Info, ListFilter, PawPrint, Search, Sparkles } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
@@ -86,6 +86,7 @@ export function PriceList() {
   const router = useRouter();
   const initialBreed = searchParams.get("breed") ?? "";
   const initialSectionTitle = searchParams.get("section") ?? "";
+  const breedSearchRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState(initialBreed);
   const [sectionTitle, setSectionTitle] = useState(initialSectionTitle);
   const [serviceName, setServiceName] = useState("all");
@@ -207,6 +208,11 @@ export function PriceList() {
     setServiceName(nextServiceName);
     setIsServiceListOpen(false);
   };
+  const openBreedSearch = () => {
+    setIsBreedListOpen(true);
+    setIsBreedListFiltered(false);
+    breedSearchRef.current?.focus();
+  };
 
   return (
     <div className="mt-10 space-y-12">
@@ -286,6 +292,7 @@ export function PriceList() {
               <Search className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-mint-dark" size={18} />
               <input
                 id="breed-search"
+                ref={breedSearchRef}
                 value={query}
                 onChange={(event) => {
                   setQuery(event.target.value);
@@ -462,14 +469,19 @@ export function PriceList() {
           ))}
           </div>
         ) : (
-          <div className="mt-5 rounded-3xl border border-dashed border-line bg-white p-8 text-center shadow-sm">
+          <button
+            type="button"
+            onClick={openBreedSearch}
+            className="focus-ring mt-5 block w-full rounded-3xl border border-dashed border-line bg-white p-8 text-center shadow-sm transition hover:border-mint hover:bg-paper-mint"
+            aria-label="Открыть список пород"
+          >
             <Search className="mx-auto text-mint-dark" size={28} aria-hidden />
             <h3 className="mt-4 text-xl font-semibold text-ink">Найдите породу в списке</h3>
             <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-muted">
               В каталоге больше сотни пород, поэтому мы не показываем весь список сразу. Начните вводить название породы
               или выберите подсказку в поле поиска.
             </p>
-          </div>
+          </button>
         )}
 
         {hasSearch && filteredDogGroups.length === 0 ? (
