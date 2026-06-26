@@ -41,11 +41,11 @@ export function Footer() {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="focus-ring flex h-11 w-11 items-center justify-center rounded-full bg-mint text-white shadow-card transition hover:-translate-y-0.5 hover:bg-mint-dark"
+                className="focus-ring flex h-12 w-12 items-center justify-center rounded-full border border-white bg-white text-ink shadow-card transition hover:-translate-y-0.5 hover:shadow-soft"
                 aria-label={item.label}
                 title={item.label}
               >
-                <BrandIcon name={item.icon} />
+                <BrandIcon name={item.icon} className="h-8 w-8" />
               </a>
             ))}
           </div>
