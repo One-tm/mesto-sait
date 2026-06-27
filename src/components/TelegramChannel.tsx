@@ -32,7 +32,16 @@ export function TelegramChannel() {
                   Telegram-канал
                 </p>
                 <h2 id="telegram-channel-title" className="mt-2 text-3xl font-semibold text-ink">
-                  Больше заботы в @mestogroom
+                  Больше заботы в{" "}
+                  <MetrikaGoalLink
+                    href={contacts.telegramChannel}
+                    goal="telegram_channel_click"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="focus-ring rounded-lg text-mint-dark transition hover:text-coral"
+                  >
+                    @mestogroom
+                  </MetrikaGoalLink>
                 </h2>
                 <p className="mt-3 max-w-2xl text-base leading-7 text-muted">
                   Показываем работы мастеров, делимся советами по уходу и публикуем свободные окна для записи.
