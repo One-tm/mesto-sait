@@ -18,7 +18,16 @@ export function Reviews() {
             <ReviewCard key={review.name} {...review} />
           ))}
         </div>
-        <div className="mt-8 text-center">
+        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <iframe
+            src="https://yandex.ru/sprav/widget/rating-badge/36411641472?type=rating"
+            width="150"
+            height="50"
+            frameBorder="0"
+            loading="lazy"
+            title="Рейтинг Место на Яндекс Картах"
+            className="rounded-2xl"
+          />
           <MetrikaGoalLink
             href={contacts.yandexMaps}
             goal="yandex_maps_click"
