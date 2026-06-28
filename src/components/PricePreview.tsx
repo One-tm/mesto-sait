@@ -87,7 +87,9 @@ export function PricePreview() {
               <ArrowRight size={18} aria-hidden />
             </span>
           </Button>
-          <BookingButton label="Записаться на груминг" />
+          <div className="hidden sm:block">
+            <BookingButton label="Записаться на груминг" />
+          </div>
         </div>
         <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-6 text-muted">
           Итоговая стоимость зависит от размера питомца, состояния шерсти, наличия колтунов и поведения во время

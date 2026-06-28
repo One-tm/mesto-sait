@@ -55,7 +55,9 @@ export function PromoOffers() {
             </div>
 
             <div className="flex flex-col gap-3">
-              <BookingButton label="Записаться со скидкой" />
+              <div className="hidden sm:block">
+                <BookingButton label="Записаться со скидкой" />
+              </div>
               <MetrikaGoalLink
                 href={contacts.telegram}
                 goal="promo_conditions_click"

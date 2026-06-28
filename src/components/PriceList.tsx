@@ -220,8 +220,8 @@ export function PriceList() {
   };
 
   return (
-    <div className="mt-10 space-y-12">
-      <section aria-labelledby="popular-breeds">
+    <div className="mt-10 flex flex-col gap-12">
+      <section aria-labelledby="popular-breeds" className="order-2 md:order-1">
         <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-mint-dark">
@@ -278,8 +278,8 @@ export function PriceList() {
         </div>
       </section>
 
-      <section aria-labelledby="all-dog-prices">
-        <div className="rounded-3xl border border-coral/25 bg-coral-soft/70 p-4 shadow-soft ring-1 ring-white/80">
+      <section aria-labelledby="all-dog-prices" className="order-1 md:order-2">
+        <div id="price-search" className="scroll-mt-28 rounded-3xl border border-coral/25 bg-coral-soft/70 p-4 shadow-soft ring-1 ring-white/80">
           <div className="grid gap-3 lg:grid-cols-2">
             <div
               ref={breedFilterRef}
@@ -498,13 +498,13 @@ export function PriceList() {
         ) : null}
 
         {hasSearch && filteredDogGroups.length > 0 ? (
-          <div className="mt-6 flex justify-center">
+          <div className="mt-6 hidden justify-center sm:flex">
             <BookingButton label="Записаться" />
           </div>
         ) : null}
       </section>
 
-      <section aria-labelledby="service-descriptions">
+      <section aria-labelledby="service-descriptions" className="order-3">
         <div>
           <div className="mb-5 flex items-center gap-3">
             <Info size={22} className="text-mint-dark" aria-hidden />
@@ -526,7 +526,7 @@ export function PriceList() {
         </div>
 
         <aside className="mt-8 grid gap-5 xl:grid-cols-[0.9fr_1.1fr]">
-          <div className="rounded-3xl border border-line bg-white p-5 shadow-sm">
+          <div id="cat-prices" className="scroll-mt-28 rounded-3xl border border-line bg-white p-5 shadow-sm">
             <div className="mb-4 flex items-center gap-2">
               <PawPrint size={20} className="text-coral" aria-hidden />
               <h2 className="text-2xl font-semibold text-ink">Кошки</h2>
@@ -564,7 +564,7 @@ export function PriceList() {
         </aside>
       </section>
 
-      <div className="flex justify-center">
+      <div className="order-4 hidden justify-center sm:flex">
         <BookingButton label="Записаться на груминг" />
       </div>
     </div>

@@ -76,7 +76,7 @@ export function Footer() {
         <div className="relative">
           <h3 className="font-semibold text-ink">Часы работы</h3>
           <p className="mt-5 leading-7 text-mint-dark">{contacts.workHours}</p>
-          <div className="mt-7">
+          <div className="mt-7 hidden sm:block">
             <BookingButton />
           </div>
           <Heart className="absolute bottom-0 right-4 hidden text-coral md:block" size={34} aria-hidden />

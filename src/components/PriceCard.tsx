@@ -28,7 +28,7 @@ export function PriceCard({ item }: { item: PriceItem }) {
         {item.coatType ? <span className="rounded-full bg-paper px-3 py-1">{item.coatType}</span> : null}
       </div>
       {item.notes ? <p className="mt-4 text-sm leading-6 text-muted">{item.notes}</p> : null}
-      <div className="mt-auto pt-6">
+      <div className="mt-auto hidden pt-6 sm:block">
         <BookingButton label="Записаться" size="sm" className="w-full" />
       </div>
     </article>

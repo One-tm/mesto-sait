@@ -6,7 +6,6 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { HomeStructuredData } from "@/components/HomeStructuredData";
 import { Hero } from "@/components/Hero";
-import { MobileBookingBar } from "@/components/MobileBookingBar";
 import { MobileQuickNav } from "@/components/MobileQuickNav";
 import { PricePreview } from "@/components/PricePreview";
 import { PromoOffers } from "@/components/PromoOffers";
@@ -33,7 +32,6 @@ export default function HomePage() {
         <FinalCTA />
       </main>
       <Footer />
-      <MobileBookingBar />
     </>
   );
 }

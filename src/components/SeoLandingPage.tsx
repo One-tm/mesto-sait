@@ -131,6 +131,9 @@ export function SeoLandingPage({ type, page }: SeoLandingPageProps) {
   const serviceRows = !isBreed ? servicePriceRows(page.serviceName) : [];
   const matchedService = !isBreed ? serviceDescriptions.find((item) => item.name === page.serviceName) : null;
   const faqItems = page.faq;
+  const priceHref = isBreed
+    ? `/price?section=${encodeURIComponent(page.breedSection)}#all-dog-prices`
+    : "/price/#service-descriptions";
 
   const jsonLd = [
     {
@@ -187,8 +190,10 @@ export function SeoLandingPage({ type, page }: SeoLandingPageProps) {
               <h1 className="text-4xl font-semibold text-ink md:text-6xl">{page.title} в Москве</h1>
               <p className="mt-5 text-lg leading-8 text-muted">{page.intro}</p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <BookingButton label="Записаться" />
-                <Button href={isBreed ? `/price?section=${encodeURIComponent(page.breedSection)}#all-dog-prices` : "/price/#service-descriptions"} variant="secondary" size="lg">
+                <div className="hidden sm:block">
+                  <BookingButton label="Записаться" />
+                </div>
+                <Button href={priceHref} variant="secondary" size="lg">
                   Смотреть прайс
                 </Button>
               </div>
@@ -212,12 +217,26 @@ export function SeoLandingPage({ type, page }: SeoLandingPageProps) {
                   <p className="mt-1 text-sm leading-5 text-muted">{contacts.nearbyTransit}</p>
                 </div>
               </div>
-              <div className="mt-5 rounded-2xl bg-paper p-4">
-                <p className="text-sm text-muted">Стоимость</p>
-                <p className="mt-1 text-2xl font-semibold text-ink">
-                  {isBreed && minPrice ? `от ${formatRub(minPrice)}` : serviceRows[0] ? `от ${formatRub(serviceRows[0].price)}` : "по прайсу"}
-                </p>
-              </div>
+              {isBreed ? (
+                <Link
+                  href={priceHref}
+                  className="focus-ring mt-5 block rounded-2xl bg-paper p-4 transition hover:bg-paper-mint"
+                  aria-label={`Открыть прайс для ${page.title}`}
+                >
+                  <p className="text-sm text-muted">Стоимость</p>
+                  <p className="mt-1 text-2xl font-semibold text-ink">
+                    {minPrice ? `от ${formatRub(minPrice)}` : "по прайсу"}
+                  </p>
+                  <p className="mt-2 text-sm font-semibold text-mint-dark">Открыть услуги породы</p>
+                </Link>
+              ) : (
+                <div className="mt-5 rounded-2xl bg-paper p-4">
+                  <p className="text-sm text-muted">Стоимость</p>
+                  <p className="mt-1 text-2xl font-semibold text-ink">
+                    {serviceRows[0] ? `от ${formatRub(serviceRows[0].price)}` : "по прайсу"}
+                  </p>
+                </div>
+              )}
               <p className="mt-5 text-sm leading-6 text-muted">
                 Итоговая цена зависит от состояния шерсти, колтунов, размера питомца и выбранного комплекса.
               </p>
@@ -244,7 +263,9 @@ export function SeoLandingPage({ type, page }: SeoLandingPageProps) {
                 </p>
               </div>
               <div className="flex flex-col gap-3">
-                <BookingButton label="Записаться со скидкой" size="lg" />
+                <div className="hidden sm:block">
+                  <BookingButton label="Записаться со скидкой" size="lg" />
+                </div>
                 <div className="flex items-start gap-2 text-sm leading-5 text-white/75">
                   <MapPin className="mt-0.5 shrink-0" size={16} aria-hidden />
                   <span>{contacts.nearbyTransit}</span>

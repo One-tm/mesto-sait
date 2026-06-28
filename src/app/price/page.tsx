@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { PriceMobileActions } from "@/components/PriceMobileActions";
 import { PriceList } from "@/components/PriceList";
 import { PriceStructuredData } from "@/components/PriceStructuredData";
 import { contacts } from "@/data/contacts";
@@ -47,16 +48,20 @@ export default function PricePage() {
             <h1 className="text-4xl font-semibold text-ink md:text-6xl">
               Стоимость груминга по породам
             </h1>
-            <p className="mt-5 text-lg leading-8 text-muted">
+            <p className="mt-5 text-lg leading-8 text-muted md:hidden">
+              Быстро найдите породу, посмотрите состав услуг и запишитесь удобным способом.
+            </p>
+            <PriceMobileActions />
+            <p className="mt-5 hidden text-lg leading-8 text-muted md:block">
               Выберите породу и услугу: комплекс со стрижкой, экспресс-линьку, гигиену,
               мытье и сушку. Породы с высоким спросом вынесены в начало, а полный каталог
               открывается через поиск с подсказками.
             </p>
-            <p className="mt-4 text-base leading-7 text-muted">
+            <p className="mt-4 hidden text-base leading-7 text-muted md:block">
               В прайсе собраны цены на груминг собак по породам в Москве, услуги для кошек и дополнительные процедуры.
               Итоговая стоимость зависит от размера питомца, состояния шерсти, колтунов и поведения во время ухода.
             </p>
-            <p className="mt-3 text-base leading-7 text-muted">
+            <p className="mt-3 hidden text-base leading-7 text-muted md:block">
               Студия находится по адресу {contacts.address}: {contacts.nearbyTransit.toLowerCase()}.
             </p>
           </div>

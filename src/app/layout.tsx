@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { MobileBookingBar } from "@/components/MobileBookingBar";
 import { YandexMetrika } from "@/components/YandexMetrika";
 
 export const metadata: Metadata = {
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <YandexMetrika />
         {children}
+        <MobileBookingBar />
         <noscript>
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}

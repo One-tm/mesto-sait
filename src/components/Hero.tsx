@@ -12,17 +12,17 @@ const points = [
 
 export function Hero() {
   return (
-    <section className="overflow-hidden pb-10 pt-6 md:pb-14 md:pt-12">
-      <div className="container grid items-center gap-10 lg:grid-cols-[0.88fr_1.12fr]">
-        <div>
-          <h1 className="max-w-3xl text-[44px] font-semibold leading-[1.08] text-ink sm:text-6xl md:text-[72px]">
+    <section className="overflow-hidden pb-6 pt-3 md:pb-14 md:pt-12">
+      <div className="container grid items-center gap-5 lg:grid-cols-[0.88fr_1.12fr] lg:gap-10">
+        <div className="order-2 lg:order-1">
+          <h1 className="max-w-3xl text-[36px] font-semibold leading-[1.08] text-ink sm:text-6xl md:text-[72px]">
             Место, где дышат заботой
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-8 text-ink/75 md:text-xl">
+          <p className="mt-4 max-w-xl text-base leading-7 text-ink/75 md:mt-6 md:text-xl md:leading-8">
             Делаем ваших питомцев счастливыми: бережный уход, профессиональный груминг
             и много любви.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row md:mt-8">
             <div className="hidden sm:block">
               <BookingButton size="lg" />
             </div>
@@ -31,7 +31,7 @@ export function Hero() {
               Наши услуги
             </Button>
           </div>
-          <div className="mt-9 grid gap-4 sm:grid-cols-3">
+          <div className="mt-9 hidden gap-4 sm:grid sm:grid-cols-3">
             {points.map(({ label, Icon }) => (
               <div key={label} className="flex items-center gap-3">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-paper-mint text-mint">
@@ -43,7 +43,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative order-1 lg:order-2">
           <Heart className="absolute -left-10 top-16 hidden text-coral md:block" size={34} aria-hidden />
           <div className="absolute right-8 top-10 hidden h-16 w-16 rounded-full border-2 border-mint/30 md:block" />
           <div className="blob-frame relative overflow-hidden bg-paper-mint shadow-soft">
@@ -53,7 +53,7 @@ export function Hero() {
               width={1600}
               height={1200}
               priority
-              className="h-full min-h-[360px] w-full object-cover object-center sm:min-h-[480px] lg:min-h-[560px]"
+              className="h-full min-h-[245px] w-full object-cover object-center sm:min-h-[480px] lg:min-h-[560px]"
             />
           </div>
           <Link

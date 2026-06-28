@@ -17,7 +17,7 @@ export function FinalCTA() {
             </h2>
             <p className="mt-4 text-lg text-muted">Это быстро и удобно.</p>
           </div>
-          <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+          <div className="hidden flex-col gap-3 sm:flex sm:flex-row lg:flex-col">
             <BookingButton size="lg" />
             <MetrikaGoalLink
               href={contacts.telegram}
