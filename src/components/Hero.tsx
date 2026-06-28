@@ -23,7 +23,9 @@ export function Hero() {
             и много любви.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <BookingButton size="lg" />
+            <div className="hidden sm:block">
+              <BookingButton size="lg" />
+            </div>
             <Button href="/price" variant="secondary" size="lg">
               <PawPrint size={18} aria-hidden />
               Наши услуги

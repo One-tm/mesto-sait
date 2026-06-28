@@ -70,10 +70,6 @@ export function Header() {
         </div>
       </div>
 
-      <div className="container pb-3 lg:hidden">
-        <BookingButton label="Записаться" size="sm" className="w-full [&>a]:min-w-0 [&>a]:flex-1" />
-      </div>
-
       {isOpen ? (
         <div className="border-t border-line bg-white lg:hidden">
           <div className="container grid gap-3 py-5">
