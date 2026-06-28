@@ -20,7 +20,7 @@ const offers = [
 
 export function PromoOffers() {
   return (
-    <section className="py-8 md:py-10">
+    <section id="promos" className="scroll-mt-28 py-8 md:py-10">
       <div className="container">
         <div className="relative overflow-hidden rounded-[32px] bg-mint-dark p-6 text-white shadow-soft md:p-8">
           <div className="absolute -right-10 -top-16 h-44 w-44 rounded-full bg-mint/30" />

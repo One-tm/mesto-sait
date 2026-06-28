@@ -9,6 +9,7 @@ import { reachGoal } from "@/lib/metrika";
 
 const nav = [
   { href: "/#services", label: "Услуги" },
+  { href: "/#promos", label: "Акции" },
   { href: "/#about", label: "О нас" },
   { href: "/#services", label: "Наши работы" },
   { href: "/#reviews", label: "Отзывы" },
@@ -26,9 +27,9 @@ export function Header() {
           <span className="block pl-1 text-[11px] uppercase tracking-[0.32em] text-muted">студия груминга</span>
         </Link>
 
-        <nav className="hidden items-center gap-9 lg:flex">
+        <nav className="hidden items-center gap-5 xl:gap-8 lg:flex">
           {nav.map((item) => (
-            <Link key={`${item.href}-${item.label}`} href={item.href} className="text-sm font-semibold text-ink/80 hover:text-mint-dark">
+            <Link key={`${item.href}-${item.label}`} href={item.href} className="whitespace-nowrap text-sm font-semibold text-ink/80 hover:text-mint-dark">
               {item.label}
             </Link>
           ))}
