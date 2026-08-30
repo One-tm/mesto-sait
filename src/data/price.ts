@@ -853,8 +853,8 @@ export const dogPriceGroups = [
     ]
   },
   {
-    "id": "vengerskaya-vyzhla",
-    "breed": "Венгерская выжла",
+    "id": "vengerskaya-vyzhla-gladkosherstnaya-ridzhbek",
+    "breed": "Венгерская выжла гладкошерстная (Риджбек)",
     "services": [
       {
         "name": "Комплекс с экспресс-линькой",
@@ -1702,6 +1702,64 @@ export const dogPriceGroups = [
     ]
   },
   {
+    "id": "legavye-gladkosherstnye-angliyskiy-poynter-brakko-italyano-veymaraner-burgosskiy-poynter",
+    "breed": "Легавые гладкошерстные (Английский пойнтер, Бракко итальяно, Веймаранер, Бургосский пойнтер)",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 5500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3900,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "legavye-dlinnosherstnye-angliyskiy-i-irlandskiy-setter-nemeckiy-langhaar-bolshoy-myunsterlender-veymaraner",
+    "breed": "Легавые длинношерстные (Английский и Ирландский сеттер, Немецкий лангхаар, Большой мюнстерлендер, Веймаранер)",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 6200,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 5800,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4200,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "legavye-zhestkosherstnye-drathaar-vengerskaya-vyzhla-cheshskiy-fousek-slovackaya-legavaya",
+    "breed": "Легавые жесткошерстные (Дратхаар, Венгерская выжла, Чешский фоусек, Словацкая легавая)",
+    "services": [
+      {
+        "name": "Комплекс с триммингом",
+        "price": 6900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 5500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4000,
+        "hasNote": false
+      }
+    ]
+  },
+  {
     "id": "leonberger",
     "breed": "Леонбергер",
     "services": [
@@ -1734,6 +1792,70 @@ export const dogPriceGroups = [
       {
         "name": "Мытье и сушка",
         "price": 2600,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "maremmo-abrucckaya-ovcharka",
+    "breed": "Мареммо-абруццкая овчарка",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 9500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 6900,
+        "hasNote": true
+      }
+    ]
+  },
+  {
+    "id": "mastino-neapoletano-neapolitanskiy-mastif",
+    "breed": "Мастино-неаполетано (Неаполитанский мастиф)",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 7900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4900,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "mastif-angliyskiy",
+    "breed": "Мастиф английский",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 8000,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 5000,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "mastif-ispanskiy",
+    "breed": "Мастиф испанский",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 8100,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 5100,
         "hasNote": false
       }
     ]
@@ -2008,6 +2130,32 @@ export const dogPriceGroups = [
     ]
   },
   {
+    "id": "mittelshnaucer",
+    "breed": "Миттельшнауцер",
+    "services": [
+      {
+        "name": "Комплекс с триммингом",
+        "price": 6200,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 5600,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4000,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2700,
+        "hasNote": false
+      }
+    ]
+  },
+  {
     "id": "mops",
     "breed": "Мопс",
     "services": [
@@ -2019,6 +2167,148 @@ export const dogPriceGroups = [
       {
         "name": "Комплекс с гигиеной",
         "price": 2600,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "morki",
+    "breed": "Морки",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4400,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3500,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2000,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "moskovskiy-drakon",
+    "breed": "Московский дракон",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 3900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3200,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2300,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "nyufaundlend",
+    "breed": "Ньюфаундленд",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 11900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 7700,
+        "hasNote": true
+      }
+    ]
+  },
+  {
+    "id": "nemeckaya-ovcharka-korotkosherstnaya",
+    "breed": "Немецкая овчарка короткошерстная",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 8500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 5600,
+        "hasNote": true
+      }
+    ]
+  },
+  {
+    "id": "nemeckaya-ovcharka-dlinnosherstnaya",
+    "breed": "Немецкая овчарка длинношерстная",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 9500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 6500,
+        "hasNote": true
+      }
+    ]
+  },
+  {
+    "id": "norvich-terer",
+    "breed": "Норвич терьер",
+    "services": [
+      {
+        "name": "Комплекс с триммингом",
+        "price": 5700,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4200,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3400,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2300,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "norfolk-terer",
+    "breed": "Норфолк терьер",
+    "services": [
+      {
+        "name": "Комплекс с триммингом",
+        "price": 5700,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4200,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3400,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2300,
         "hasNote": false
       }
     ]
@@ -2040,7 +2330,123 @@ export const dogPriceGroups = [
       {
         "name": "Мытье и сушка",
         "price": 2300,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "pekines",
+    "breed": "Пекинес",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4700,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4100,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2300,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "pireneyskaya-sobaka",
+    "breed": "Пиренейская собака",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 10700,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 7400,
         "hasNote": true
+      }
+    ]
+  },
+  {
+    "id": "amerikanskiy-pitbulterer",
+    "breed": "Американский питбультерьер",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 5500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3900,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "peterburgskaya-orhideya",
+    "breed": "Петербургская орхидея",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3600,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 1800,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "pomapu-do-5-kg",
+    "breed": "Помапу до 5 кг",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4600,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3700,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2100,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "pomapu-ot-5-kg",
+    "breed": "Помапу от 5 кг",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4800,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3900,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2300,
+        "hasNote": false
       }
     ]
   },
@@ -2083,6 +2489,22 @@ export const dogPriceGroups = [
         "name": "Комплекс с гигиеной",
         "price": 3200,
         "hasNote": true
+      }
+    ]
+  },
+  {
+    "id": "pti-brabanson",
+    "breed": "Пти-брабансон",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 4600,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 2600,
+        "hasNote": false
       }
     ]
   },
@@ -2171,6 +2593,169 @@ export const dogPriceGroups = [
     ]
   },
   {
+    "id": "pshenichnyy-terer",
+    "breed": "Пшеничный терьер",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 5900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4500,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2700,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "zolotistyy-retriver-golden-retriver",
+    "breed": "Золотистый Ретривер (Голден Ретривер)",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 7500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 5800,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 3900,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "rizenshnaucer",
+    "breed": "Ризеншнауцер",
+    "services": [
+      {
+        "name": "Комплекс с триммингом",
+        "price": 11900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 7500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 5900,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 3900,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "rotveyler",
+    "breed": "Ротвейлер",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 6900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 5900,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "russkaya-borzaya",
+    "breed": "Русская борзая",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 5300,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 4900,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 3000,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "russkaya-cvetnaya-bolonka",
+    "breed": "Русская цветная болонка",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4600,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3700,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2100,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "russkiy-spaniel",
+    "breed": "Русский спаниель",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4800,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3800,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2400,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "salyuki",
+    "breed": "Салюки",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 5500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3800,
+        "hasNote": false
+      }
+    ]
+  },
+  {
     "id": "samoed",
     "breed": "Самоед",
     "services": [
@@ -2192,6 +2777,38 @@ export const dogPriceGroups = [
     ]
   },
   {
+    "id": "senbernar",
+    "breed": "Сенбернар",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 9800,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 6500,
+        "hasNote": true
+      }
+    ]
+  },
+  {
+    "id": "moskovskaya-storozhevaya",
+    "breed": "Московская сторожевая",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 9800,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 6500,
+        "hasNote": true
+      }
+    ]
+  },
+  {
     "id": "sibirskiy-haski",
     "breed": "Сибирский хаски",
     "services": [
@@ -2202,7 +2819,7 @@ export const dogPriceGroups = [
       },
       {
         "name": "Комплекс с гигиеной",
-        "price": 3900,
+        "price": 4200,
         "hasNote": true
       }
     ]
@@ -2224,6 +2841,522 @@ export const dogPriceGroups = [
     ]
   },
   {
+    "id": "silihem-terer",
+    "breed": "Силихем терьер",
+    "services": [
+      {
+        "name": "Комплекс с триммингом",
+        "price": 5300,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4300,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3200,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2300,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "skay-terer",
+    "breed": "Скай терьер",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4800,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3600,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2300,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "spaniel-kavaler-king-charlz",
+    "breed": "Спаниель Кавалер Кинг Чарльз",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4700,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4200,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2500,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "spaniel-koker-amerikanskiy",
+    "breed": "Спаниель кокер Американский",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 5900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4600,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 3500,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "spaniel-koker-angliyskiy",
+    "breed": "Спаниель кокер Английский",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 5900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4600,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 3500,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "klamber-spaniel",
+    "breed": "Кламбер-спаниель",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 6500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 5100,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 3800,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "springer-spaniel",
+    "breed": "Спрингер-спаниель",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 5500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4200,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 3000,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "skotch-terer",
+    "breed": "Скотч терьер",
+    "services": [
+      {
+        "name": "Комплекс с триммингом",
+        "price": 5300,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4300,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3200,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2300,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "sredneaziatskaya-ovcharka-alabay",
+    "breed": "Среднеазиатская овчарка (Алабай)",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 10900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 7200,
+        "hasNote": true
+      }
+    ]
+  },
+  {
+    "id": "amerikanskiy-staffordshirskiy-terer-amstaff",
+    "breed": "Американский стаффордширский терьер (Амстафф)",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 5500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3500,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "taksa-gladkosherstnaya-ot-5-kg",
+    "breed": "Такса гладкошерстная от 5 кг",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 4500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 2900,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "taksa-dlinnosherstnaya-ot-5-kg",
+    "breed": "Такса длинношерстная от 5 кг",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4700,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 4500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 2900,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "taksa-zhestkosherstnaya-ot-5-kg",
+    "breed": "Такса жесткошерстная от 5 кг",
+    "services": [
+      {
+        "name": "Комплекс с триммингом",
+        "price": 5200,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4700,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 2900,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "taksa-zhestkosherstnaya-do-5-kg",
+    "breed": "Такса жесткошерстная до 5 кг",
+    "services": [
+      {
+        "name": "Комплекс с триммингом",
+        "price": 4900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4400,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 2600,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "taksa-gladkosherstnaya-do-5-kg",
+    "breed": "Такса гладкошерстная до 5 кг",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 4200,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 2600,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "taksa-dlinnosherstnaya-do-5-kg",
+    "breed": "Такса длинношерстная до 5 кг",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4400,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 4200,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 2600,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "tibetskiy-mastif",
+    "breed": "Тибетский мастиф",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 12900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 8900,
+        "hasNote": true
+      }
+    ]
+  },
+  {
+    "id": "tibetskiy-terer",
+    "breed": "Тибетский терьер",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 5600,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4800,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 3000,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "toy-terer-gladkosherstnyy",
+    "breed": "Той-терьер гладкошерстный",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 4000,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 2400,
+        "hasNote": true
+      }
+    ]
+  },
+  {
+    "id": "toy-terer-dlinnosherstnyy",
+    "breed": "Той-терьер длинношерстный",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4200,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 4000,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2400,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "toller-novoshotlandskiy-retriver",
+    "breed": "Толлер (Новошотландский ретривер)",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 6500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 5300,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 3500,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "faraonova-sobaka",
+    "breed": "Фараонова собака",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 5200,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4100,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "fila-brazileyro-brazilskiy-mastif",
+    "breed": "Фила бразилейро (Бразильский мастиф)",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 7900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 5700,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "flandrskiy-buve",
+    "breed": "Фландрский бувье",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 6000,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4900,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 3500,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "foks-terer-gladkosherstnyy",
+    "breed": "Фокс терьер гладкошерстный",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 4600,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3300,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "foks-terer-zhestkosherstnyy",
+    "breed": "Фокс терьер жесткошерстный",
+    "services": [
+      {
+        "name": "Комплекс с триммингом",
+        "price": 6800,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 5500,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4000,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2700,
+        "hasNote": false
+      }
+    ]
+  },
+  {
     "id": "francuzskiy-bul-dog",
     "breed": "Французский бульдог",
     "services": [
@@ -2235,6 +3368,43 @@ export const dogPriceGroups = [
       {
         "name": "Комплекс с гигиеной",
         "price": 2500,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "hanaanskaya-sobaka",
+    "breed": "Ханаанская собака",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 5900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3700,
+        "hasNote": true
+      }
+    ]
+  },
+  {
+    "id": "hin-yaponskiy",
+    "breed": "Хин Японский",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 3900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3200,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2400,
         "hasNote": false
       }
     ]
@@ -2261,6 +3431,85 @@ export const dogPriceGroups = [
       {
         "name": "Мытье и сушка",
         "price": 2400,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "cvergpincher",
+    "breed": "Цвергпинчер",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 4200,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 2500,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "chau-chau",
+    "breed": "Чау-Чау",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 5800,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4900,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 3900,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "chernyy-terer",
+    "breed": "Черный терьер",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 10900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 6500,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 4200,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "cheshskiy-terer",
+    "breed": "Чешский Терьер",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4300,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3200,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2300,
         "hasNote": false
       }
     ]
@@ -2303,6 +3552,59 @@ export const dogPriceGroups = [
     ]
   },
   {
+    "id": "sharpey",
+    "breed": "Шарпей",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 5200,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3600,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "shveycarskaya-gonchaya",
+    "breed": "Швейцарская гончая",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 5300,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3500,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "shelti",
+    "breed": "Шелти",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 5800,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4900,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2900,
+        "hasNote": false
+      }
+    ]
+  },
+  {
     "id": "shi-tcu",
     "breed": "Ши-тцу",
     "services": [
@@ -2319,6 +3621,48 @@ export const dogPriceGroups = [
       {
         "name": "Мытье и сушка",
         "price": 2400,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "shi-pu-do-5-kg",
+    "breed": "Ши-пу до 5 кг",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4600,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3700,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2100,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "shi-pu-ot-5-kg",
+    "breed": "Ши-пу от 5 кг",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4800,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3900,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2300,
         "hasNote": false
       }
     ]
@@ -2425,6 +3769,127 @@ export const dogPriceGroups = [
         "name": "Комплекс с гигиеной",
         "price": 4200,
         "hasNote": true
+      }
+    ]
+  },
+  {
+    "id": "erdelterer",
+    "breed": "Эрдельтерьер",
+    "services": [
+      {
+        "name": "Комплекс с триммингом",
+        "price": 7600,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 5800,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4500,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 3600,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "estonskaya-gonchaya",
+    "breed": "Эстонская гончая",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 5000,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4000,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "entlebuher-zennenhund",
+    "breed": "Энтлебухер зенненхунд",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 5200,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 4200,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "yuzhnorusskaya-ovcharka",
+    "breed": "Южнорусская овчарка",
+    "services": [
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 8900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 7900,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 6900,
+        "hasNote": true
+      }
+    ]
+  },
+  {
+    "id": "yagdterer-zhestkosherstnyy",
+    "breed": "Ягдтерьер жесткошерстный",
+    "services": [
+      {
+        "name": "Комплекс с триммингом",
+        "price": 5300,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс со стрижкой",
+        "price": 4700,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3600,
+        "hasNote": false
+      },
+      {
+        "name": "Мытье и сушка",
+        "price": 2500,
+        "hasNote": false
+      }
+    ]
+  },
+  {
+    "id": "yagdterer-korotkosherstnyy",
+    "breed": "Ягдтерьер короткошерстный",
+    "services": [
+      {
+        "name": "Комплекс с экспресс-линькой",
+        "price": 4700,
+        "hasNote": false
+      },
+      {
+        "name": "Комплекс с гигиеной",
+        "price": 3400,
+        "hasNote": false
       }
     ]
   }
