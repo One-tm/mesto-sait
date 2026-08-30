@@ -17,31 +17,31 @@ export function BookingButton({
   size = "md"
 }: BookingButtonProps) {
   const isCompact = size === "sm";
-  const telegramLabel = isCompact ? "Записаться TG" : "Записаться Telegram";
-  const maxLabel = "MAX";
+  const telegramLabel = isCompact ? "Написать" : "Написать в Telegram";
   const buttonClass = isCompact ? "px-3" : "";
 
   return (
     <div className={["inline-flex flex-wrap items-center gap-2", className].filter(Boolean).join(" ")}>
       <Button
-        href={contacts.telegram}
+        href={contacts.dikidi}
         size={size}
         className={buttonClass}
-        aria-label={`${label} через Telegram`}
+        aria-label={`${label} через DIKIDI`}
+        onClick={() => reachGoal("booking_dikidi")}
+      >
+        <CalendarCheck size={18} aria-hidden />
+        {label}
+      </Button>
+      <Button
+        href={contacts.telegram}
+        variant="secondary"
+        size={size}
+        className={buttonClass}
+        aria-label="Написать администратору в Telegram"
         onClick={() => reachGoal("booking_telegram")}
       >
         <CalendarCheck size={18} aria-hidden />
         {telegramLabel}
-      </Button>
-      <Button
-        href={contacts.max}
-        size={size}
-        className={buttonClass}
-        aria-label={`${label} через MAX`}
-        onClick={() => reachGoal("booking_max")}
-      >
-        <CalendarCheck size={18} aria-hidden />
-        {maxLabel}
       </Button>
     </div>
   );
