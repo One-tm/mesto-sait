@@ -4,7 +4,7 @@ import { BrandIcon } from "@/components/BrandIcon";
 import { contacts } from "@/data/contacts";
 import { BookingButton } from "@/components/BookingButton";
 import { MetrikaGoalLink } from "@/components/MetrikaGoalLink";
-import { GoogleMap } from "@/components/GoogleMap";
+import { LocationMap } from "@/components/LocationMap";
 
 const socialLinks = [
   { href: contacts.telegram, label: "Telegram", icon: "telegram" as const },
@@ -59,7 +59,7 @@ export function Footer() {
         <div>
           <h3 className="font-semibold text-ink">Мы рядом</h3>
           <div className="mt-4">
-            <GoogleMap />
+            <LocationMap />
           </div>
           <p className="mt-3 text-sm leading-6 text-mint-dark">{contacts.nearbyTransit}</p>
         </div>
