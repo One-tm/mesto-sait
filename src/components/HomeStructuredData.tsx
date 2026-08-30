@@ -18,14 +18,25 @@ export function HomeStructuredData() {
         telephone: contacts.phoneDisplay,
         email: contacts.email,
         priceRange: "₽₽",
+        currenciesAccepted: "RUB",
+        paymentAccepted: "Cash, Card",
         description:
           `Студия груминга для собак и кошек в Москве: комплексный уход, стрижка, гигиена, экспресс-линька и бережная работа с питомцами. ${contacts.nearbyTransit}.`,
         address: {
           "@type": "PostalAddress",
           addressCountry: "RU",
           addressLocality: "Москва",
+          postalCode: "125319",
           streetAddress: "ул. Академика Ильюшина, 16"
         },
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: contacts.phoneDisplay,
+          email: contacts.email,
+          contactType: "customer service",
+          availableLanguage: ["Russian"]
+        },
+        hasMap: contacts.googleMaps,
         openingHoursSpecification: [
           {
             "@type": "OpeningHoursSpecification",
@@ -34,7 +45,22 @@ export function HomeStructuredData() {
             closes: "21:00"
           }
         ],
-        sameAs: [contacts.telegramChannel, contacts.yandexMaps]
+        sameAs: [contacts.telegramChannel, contacts.yandexMaps, contacts.googleMaps],
+        potentialAction: {
+          "@type": "ReserveAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: contacts.dikidi,
+            actionPlatform: [
+              "https://schema.org/DesktopWebPlatform",
+              "https://schema.org/MobileWebPlatform"
+            ]
+          },
+          result: {
+            "@type": "Reservation",
+            name: "Запись на груминг"
+          }
+        }
       },
       {
         "@type": "WebSite",

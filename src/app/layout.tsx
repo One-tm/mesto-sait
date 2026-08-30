@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { MobileBookingBar } from "@/components/MobileBookingBar";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { YandexMetrika } from "@/components/YandexMetrika";
 
 export const metadata: Metadata = {
@@ -38,6 +39,17 @@ export const metadata: Metadata = {
       { url: "/icon.png", type: "image/png" }
     ],
     apple: [{ url: "/apple-touch-icon.png" }]
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1
+    }
   }
 };
 
@@ -45,6 +57,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ru">
       <body>
+        <GoogleAnalytics />
         <YandexMetrika />
         {children}
         <MobileBookingBar />

@@ -3,7 +3,7 @@ import { breedLandingPages, serviceLandingPages } from "@/data/seoPages";
 
 export const dynamic = "force-static";
 
-const lastModified = new Date("2026-06-15");
+const lastModified = new Date("2026-08-30");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -18,6 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "weekly",
       priority: 0.8
+    },
+    {
+      url: "https://mestogroom.ru/privacy",
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.2
     },
     ...breedLandingPages.map((page) => ({
       url: `https://mestogroom.ru/breeds/${page.slug}`,
