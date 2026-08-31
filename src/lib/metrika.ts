@@ -6,7 +6,6 @@ export type MetrikaGoal =
   | "booking_max"
   | "phone_click"
   | "yandex_maps_click"
-  | "yandex_maps_route_click"
   | "google_maps_click"
   | "google_maps_route_click"
   | "telegram_channel_click"

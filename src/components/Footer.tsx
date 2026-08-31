@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { Heart, Mail, MapPin, Phone } from "lucide-react";
+import { ExternalLink, Heart, Mail, MapPin, Phone } from "lucide-react";
 import { BrandIcon } from "@/components/BrandIcon";
 import { contacts } from "@/data/contacts";
 import { BookingButton } from "@/components/BookingButton";
 import { MetrikaGoalLink } from "@/components/MetrikaGoalLink";
-import { LocationMap } from "@/components/LocationMap";
 
 const socialLinks = [
   { href: contacts.telegram, label: "Telegram", icon: "telegram" as const },
@@ -15,7 +14,7 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer id="contacts" className="footer-wave mt-16 bg-paper-mint py-12 text-ink">
-      <div className="container grid gap-8 md:grid-cols-2 lg:grid-cols-[0.8fr_1fr_1.35fr_0.75fr]">
+      <div className="container grid gap-8 md:grid-cols-[1fr_1.1fr_1fr_0.8fr]">
         <div>
           <Link href="/" className="logo-script text-5xl font-semibold leading-none text-mint">Место</Link>
           <p className="mt-1 text-[11px] uppercase tracking-[0.32em] text-muted">студия груминга</p>
@@ -58,9 +57,30 @@ export function Footer() {
         </div>
         <div>
           <h3 className="font-semibold text-ink">Мы рядом</h3>
-          <div className="mt-4">
-            <LocationMap />
-          </div>
+          <MetrikaGoalLink
+            href={contacts.yandexMaps}
+            goal="yandex_maps_click"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 block overflow-hidden rounded-2xl border border-line bg-white shadow-card"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/map-preview.png"
+              alt={`Карта проезда к студии «Место»: ${contacts.address}`}
+              className="h-28 w-full scale-[1.06] object-cover"
+            />
+          </MetrikaGoalLink>
+          <MetrikaGoalLink
+            href={contacts.googleMaps}
+            goal="google_maps_click"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-ring mt-3 inline-flex items-center gap-1.5 rounded-full text-xs font-semibold text-muted transition hover:text-mint-dark"
+          >
+            <ExternalLink size={14} aria-hidden />
+            Открыть в Google Картах
+          </MetrikaGoalLink>
           <p className="mt-3 text-sm leading-6 text-mint-dark">{contacts.nearbyTransit}</p>
         </div>
         <div className="relative">
