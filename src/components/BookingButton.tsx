@@ -24,6 +24,7 @@ export function BookingButton({
     <div className={["inline-flex flex-wrap items-center gap-2", className].filter(Boolean).join(" ")}>
       <Button
         href={contacts.dikidi}
+        target="_self"
         size={size}
         className={buttonClass}
         aria-label={`${label} через DIKIDI`}

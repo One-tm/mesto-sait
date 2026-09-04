@@ -3,6 +3,7 @@ import "./globals.css";
 import { MobileBookingBar } from "@/components/MobileBookingBar";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { YandexMetrika } from "@/components/YandexMetrika";
+import { DikidiScript } from "@/components/DikidiScript";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mestogroom.ru"),
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <GoogleAnalytics />
         <YandexMetrika />
+        <DikidiScript />
         {children}
         <MobileBookingBar />
         <noscript>

@@ -6,7 +6,7 @@ export const contacts = {
   type: "студия груминга",
   phoneDisplay: "+7 903 617-80-17",
   phoneHref: "tel:+79036178017",
-  dikidi: "https://dikidi.net/2136048",
+  dikidi: "https://dikidi.net/#widget=217261",
   telegram: "https://t.me/mestoadmin",
   telegramChannel: "https://t.me/mestogroom",
   max: "https://max.ru/u/f9LHodD0cOL67NPVHTyDzrzAniFXMFvE5h6GH-3TVDIwP82H-3Px_qPSaQ0",
